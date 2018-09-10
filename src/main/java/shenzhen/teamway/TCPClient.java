@@ -15,15 +15,17 @@ public class TCPClient {
     private static final int timeout = 5000;
 
     public static void main(String[] args) {
+        String msg="Cmd="+2+",DevId="+410521693+",Type=1";
         Socket socket = null;
         InputStream inputStream = null;
         OutputStream outputStream = null;
         try {
             //创建Socket实例
-            socket = new Socket("127.0.0.1", port);
+            socket = new Socket("192.168.13.206", port);
             //获取输出流,向服务器发生数据
             outputStream = socket.getOutputStream();
-            outputStream.write("Cmd=2,DevId=2,Type=1".getBytes());
+            outputStream.write(msg.getBytes());
+            socket.setSoTimeout(10000000);
             ///获取输入流,获取服务器的响应
             inputStream = socket.getInputStream();
             byte[] buff = new byte[1024];

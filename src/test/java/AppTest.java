@@ -10,7 +10,7 @@ public class AppTest {
     public static void main(String[] args) {
         final HashMap<String, String> map = new HashMap<String, String>();
 
-        String s = "deviceid=567466412,name=KBT37...........deviceid=569463093,name=......-60W.deviceid=575514832,name=KBT85...........deviceid=810434374,name=485YG.deviceid=810451715,name=.......deviceid=410521693,name=......New.deviceid=440834797,name=.......deviceid=504958072,name=JXBS3001...................deviceid=318256905,name=...................";
+        String s = " Id=810000011,Name=....,BaseTypeId=1006001001,Value=25,Valid=1,SampleTime=2018-09-10 11:02:33.Id=810000021,Name=....,BaseTypeId=1006003001,Value=54.3,Valid=1,SampleTime=2018-09-10 11:02:33.";
         final String[] split = s.split("deviceid=");
         for (int i = 0; i < split.length; i++) {
             String ss = split[i];
